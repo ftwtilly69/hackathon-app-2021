@@ -3,7 +3,6 @@ import { Platform, ScrollView, UIManager } from 'react-native';
 import { View } from 'react-native';
 import EventCard from '../components/cards/EventCard';
 import { Event } from '@knighthacks/hackathon';
-import CountDown from '../components/CountDown';
 
 const testJSON: Event[] = [
   {
@@ -61,7 +60,6 @@ function Schedule(): JSX.Element {
           alignContent: 'center',
         }}
       >
-        <CountDown />
         {testJSON.map((event) => (
           <EventCard event={event} key={event.name} />
         ))}
